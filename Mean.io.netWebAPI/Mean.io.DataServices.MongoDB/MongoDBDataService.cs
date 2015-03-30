@@ -7,6 +7,7 @@ using Mean.io.Interfaces;
 using MongoDB.Bson;
 using MongoDB.Driver;
 using MongoDB.Driver.Builders;
+using MongoDB.Bson.Serialization;
 
 namespace Mean.io.DataServices.MongoDB
 {
@@ -15,19 +16,26 @@ namespace Mean.io.DataServices.MongoDB
 
         public MongoDBDataService()
         {
-          
+           BsonClassMap.RegisterClassMap<IArticle>();
         }
 
         public IEnumerable<IArticle> GetAllArticles()
         {
-            IEnumerable<IArticle> collection = null;
+            IEnumerable<IArticle> retCollection = null;
             try
             {
                 var connectionString = "mongodb://localhost";
                 var client = new MongoClient(connectionString);
                 var server = client.GetServer();
                 var database = server.GetDatabase("mean-dev");
-                collection = (IEnumerable<IArticle>) database.GetCollection<IArticle>("articles");
+                var collection =  database.GetCollection("articles");
+                var result = collection.FindAllAs<IArticle>();
+
+                foreach (IArticle item in result)
+                {
+                    Console.WriteLine("item _id:" + item._id + "item title:" + item.title + "item username");// + item.user.username);
+                }
+
                 server.Disconnect();
                 client = null;
             }
@@ -36,7 +44,7 @@ namespace Mean.io.DataServices.MongoDB
                 throw ex;
             }
           
-            return collection; 
+            return retCollection; 
         } 
 
         public IArticle GetArticle(int id)
@@ -45,15 +53,15 @@ namespace Mean.io.DataServices.MongoDB
             IArticle entity = null;
             try
             {
-                var connectionString = "mongodb://localhost";
-                var client = new MongoClient(connectionString);
-                var server = client.GetServer();
-                var database = server.GetDatabase("mean-dev");
-                var collection = database.GetCollection<IArticle>("articles");
-                var query = Query<IArticle>.EQ(e => e._id, id);
-                entity = collection.FindOne(query);
-                server.Disconnect();
-                client = null;
+                //var connectionString = "mongodb://localhost";
+                //var client = new MongoClient(connectionString);
+                //var server = client.GetServer();
+                //var database = server.GetDatabase("mean-dev");
+                //var collection = database.GetCollection<IArticle>("articles");
+                //var query = Query<IArticle>.EQ(e => e._id, id);
+                //entity = collection.FindOne(query);
+                //server.Disconnect();
+                //client = null;
             }
             catch (Exception ex)
             {

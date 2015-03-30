@@ -14,12 +14,7 @@ namespace Mean.io.netWebAPI.Controllers
     {
 
 
-        Article[] articles = new Article[]
-       {
-            new Article { _id = 1, username = "Tomato Soup", Category = "Groceries", Price = 1 },
-            new Article { _id = 2, username = "Yo-yo", Category = "Toys", Price = 3.75M },
-            new Article { _id = 3, username = "Hammer", Category = "Hardware", Price = 16.99M }
-       };
+    
 
         IDataService MyDataservice = new DataServices.MongoDB.MongoDBDataService();
 

@@ -1,15 +1,24 @@
 ﻿using System;
+using MongoDB.Bson.Serialization;
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace Mean.io.Interfaces
 {
     public interface IArticle
     {
-         int _id { get; set; }
-         IUser user { get; set; }
-         string title { get; set; }
+        [BsonId]
+        int _id { get; set; }
+        //IUser user { get; set; }
 
-         string content { get; set; }
+        [BsonElement]
+        string title { get; set; }
 
-         DateTime created { get; set; }
+
+        [BsonElement]
+        string content { get; set; }
+
+
+        [BsonElement]
+        DateTime created { get; set; }
     }
 }
