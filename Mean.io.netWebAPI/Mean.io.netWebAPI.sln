@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.22609.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mean.io.netWebAPI", "Mean.io.netWebAPI\Mean.io.netWebAPI.csproj", "{A8848175-1565-44BA-9F62-2A5866E641D4}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Mean.io.MongoDbDataService", "Mean.io.MongoDbDataService\Mean.io.MongoDbDataService.kproj", "{EF7F6D2E-7CC3-4DDB-96FA-CC03A3AC143D}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Mean.io.CommonInterfaces", "Mean.io.CommonInterfaces\Mean.io.CommonInterfaces.kproj", "{025D1FF1-6EEF-4391-AC7E-E53889236B07}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A8848175-1565-44BA-9F62-2A5866E641D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8848175-1565-44BA-9F62-2A5866E641D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8848175-1565-44BA-9F62-2A5866E641D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8848175-1565-44BA-9F62-2A5866E641D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF7F6D2E-7CC3-4DDB-96FA-CC03A3AC143D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF7F6D2E-7CC3-4DDB-96FA-CC03A3AC143D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF7F6D2E-7CC3-4DDB-96FA-CC03A3AC143D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF7F6D2E-7CC3-4DDB-96FA-CC03A3AC143D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{025D1FF1-6EEF-4391-AC7E-E53889236B07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{025D1FF1-6EEF-4391-AC7E-E53889236B07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{025D1FF1-6EEF-4391-AC7E-E53889236B07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{025D1FF1-6EEF-4391-AC7E-E53889236B07}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "net45": {
+      "wrappedProject": "../../Mean.io.netWebAPI/Mean.io.netWebAPI.csproj",
+      "bin": {
+        "assembly": "../../Mean.io.netWebAPI/obj/{configuration}/Mean.io.netWebAPI.dll",
+        "pdb": "../../Mean.io.netWebAPI/obj/{configuration}/Mean.io.netWebAPI.pdb"
+      },
+      "dependencies": {
+        "Microsoft.AspNet.WebApi": "5.2.2",
+        "Microsoft.AspNet.WebApi.Client": "5.2.2",
+        "Microsoft.AspNet.WebApi.Core": "5.2.2",
+        "Microsoft.AspNet.WebApi.WebHost": "5.2.2",
+        "Newtonsoft.Json": "6.0.4",
+        "MongoDB.Bson": "1.0.0-*",
+        "MongoDB.Driver.Core": "1.0.0-*",
+        "MongoDB.Driver": "1.0.0-*",
+        "MongoDB.Driver.Legacy": "1.0.0-*"
+      }
+    }
+  }
+}

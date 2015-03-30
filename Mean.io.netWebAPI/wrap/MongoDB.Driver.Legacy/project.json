@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "net45": {
+      "bin": {
+        "assembly": "G:/dev/CSharpDriver-2.0.0-rc0/MongoDB.Driver.Legacy.dll"
+      }
+    }
+  }
+}
