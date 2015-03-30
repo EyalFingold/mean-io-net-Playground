@@ -5,12 +5,14 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using Mean.io.netWebAPI.Models;
-
+using Mean.io.Interfaces;
+using Mean.io.DataServices;
 
 namespace Mean.io.netWebAPI.Controllers
 {
     public class ArticlesController : ApiController
     {
+
 
         Article[] articles = new Article[]
        {
@@ -19,14 +21,19 @@ namespace Mean.io.netWebAPI.Controllers
             new Article { _id = 3, username = "Hammer", Category = "Hardware", Price = 16.99M }
        };
 
-        public IEnumerable<Article> GetAllProducts()
+        IDataService MyDataservice = new DataServices.MongoDB.MongoDBDataService();
+
+
+
+
+        public IEnumerable<IArticle> GetAllProducts()
         {
-            return articles;
+            return MyDataservice.GetAllArticles();
         }
 
         public IHttpActionResult GetArticle(int id)
         {
-            var article = articles.FirstOrDefault((p) => p._id == id);
+            var article = MyDataservice.GetArticle(id);//  articles.FirstOrDefault((p) => p._id == id);
             if (article == null)
             {
                 return NotFound();

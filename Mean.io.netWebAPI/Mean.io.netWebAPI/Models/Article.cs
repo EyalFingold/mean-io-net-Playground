@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using Mean.io.Interfaces;
 
 namespace Mean.io.netWebAPI.Models
 {
@@ -9,8 +10,12 @@ namespace Mean.io.netWebAPI.Models
     {
 
         public int _id { get; set; }
-        public string username { get; set; }
-        public string Category { get; set; }
-        public decimal Price { get; set; }
+        public IUser user { get; set; }
+        public string title { get; set; }
+
+        public string content { get; set; }
+
+        public DateTime created { get; set; }
+
     }
 }

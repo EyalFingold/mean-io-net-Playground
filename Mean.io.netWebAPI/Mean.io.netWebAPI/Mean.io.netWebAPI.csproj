@@ -39,18 +39,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="MongoDB.Bson">
-      <HintPath>G:\dev\CSharpDriver-2.0.0-rc0\MongoDB.Bson.dll</HintPath>
-    </Reference>
-    <Reference Include="MongoDB.Driver">
-      <HintPath>G:\dev\CSharpDriver-2.0.0-rc0\MongoDB.Driver.dll</HintPath>
-    </Reference>
-    <Reference Include="MongoDB.Driver.Core">
-      <HintPath>G:\dev\CSharpDriver-2.0.0-rc0\MongoDB.Driver.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="MongoDB.Driver.Legacy">
-      <HintPath>G:\dev\CSharpDriver-2.0.0-rc0\MongoDB.Driver.Legacy.dll</HintPath>
-    </Reference>
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -107,6 +95,16 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Mean.io.DataServices.MongoDB\Mean.io.DataServices.MongoDB.csproj">
+      <Project>{f40614e5-1621-40a6-aaac-3d84f5488a7a}</Project>
+      <Name>Mean.io.DataServices.MongoDB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mean.io.Interfaces\Mean.io.Interfaces.csproj">
+      <Project>{1dea305e-c4c3-4971-af77-e7046c828a44}</Project>
+      <Name>Mean.io.Interfaces</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
